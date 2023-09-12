@@ -9,38 +9,40 @@ const movie = ({}: Props) => {
       <div className="flex justify-between gap-[24px] items-center">
         <div className="font-poppins font-[400] text-[20px]">
           <p className="text-[#333]">
-            Top Gunis a popular American action film that was released in 1986.
-            Directed by Tony Scott and produced by Don Simpson and Jerry
-            Bruckheimer, the film gained significant recognition and became a
-            cultural phenomenon during the 1980s. Heres some information about
-            the movie
+            'Lost in Time' is a captivating sci-fi adventure that explores the
+            complexities of altering the past and the profound impact it can
+            have on one's future. With stunning visuals and a thought-provoking
+            storyline, this film takes audiences on an unforgettable voyage
+            through the mysteries of time itself.
           </p>
           <div className="relative mt-10">
             <div className="flex flex-col gap-[31px] font-[400] text-[20px]">
               <p className="text-[#333]">
                 Director :
-                <span className="text-[#BE123C]">Joseph konsinki</span>
+                <span className="text-[#BE123C]"> Joseph konsinki</span>
               </p>
               <p className="text-[#333]">
                 Writers :
                 <span className="text-[#BE123C]">
+                  {" "}
                   Jim Cash, Jack Epps Jr, Peter Craig
                 </span>
               </p>
               <p className="text-[#333]">
                 Director :
                 <span className="text-[#BE123C]">
+                  {" "}
                   Tom Cruise, Jennifer Connelly, Miles Teller
                 </span>
               </p>
             </div>
             <div className="w-full mt-6 flex items-center  gap-2 border border-[#C7C7C7]  rounded-[10px] text-white">
               <button className="w-[253px] text-white bg-[#BE123C] h-[55px] rounded-[10px]">
-                Top rated movie #65
+                Top rated movie #25
               </button>
               <input
                 type="text"
-                placeholder="Awards 9 nominations"
+                placeholder="5 Awards Nominated"
                 className=" text-black font-poppins font-[500] text-[20px] bg-inherit "
               />
               <div className="flex absolute right-4 items-center font-extrabold">

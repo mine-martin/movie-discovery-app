@@ -1,33 +1,42 @@
 /* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
+import Link from "next/link";
 import React from "react";
+import Moviepage from "./moviepage";
+import Movie from "./movie";
 
 type Props = {};
 
 const MoviePage = ({}: Props) => {
   return (
-    <section className="max-container pt-20 w-full">
-      <div className="pt-20 flex items-center justify-evenly">
-        <div className="items-center mr-10">
-          <div className="font-bold text-lg mb-2 mt-2  flex items-center gap-4 text-slate-500">
-            <p>Ashoka Starwars . 2022 . PG-13 . 2h 10m</p>
-            <span className="inline-block outline outline-1 rounded-full px-3 py-1 text-sm font-semibold text-red-500">
-              Action
-            </span>
-            <span className="inline-block outline outline-1 rounded-full px-3 py-1 text-sm font-semibold text-red-500">
-              Drama
-            </span>
+    <section className="max-container pt-5 movie-cont pl-10 pr-10 w-full mt-5 mb-[10rem] h-full p-4 ">
+      <Link href="/">
+        <div className="w-full relative">
+          <Image src="/movie.png" alt="" height={600} width={1440} />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <Image src="/Play.svg" alt="" width={54} height={54} />
+            <Image
+              src="/Ellipse4.svg"
+              alt=""
+              width={110}
+              height={110}
+              className="absolute"
+            />
           </div>
         </div>
-        <div className="ml-10">
-          <div className="text-2xl flex items-center gap-2 justify-center">
-            <img src="/star.png" alt="" width={30} />
-            <p className="text-slate-300">8.5</p>
-            <p className="text-slate-500">350k</p>
+      </Link>
+      <div className="pt-5 flex flex-col justify-evenly ">
+        <div className="items-center ">
+          <div className="mt-5 relative">
+            <Moviepage />
+          </div>
+          <div className="mt-5 relative">
+            <Movie />
           </div>
         </div>
       </div>
     </section>
   );
-}
+};
 
 export default MoviePage;
