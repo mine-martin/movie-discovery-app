@@ -8,7 +8,7 @@ import {
   AiOutlineTwitter,
 } from "react-icons/ai";
 
-function Footer() {
+const Footer = () => {
   return (
     <section className="mt-10 pt-10 pb-10">
       <div className="flex items-center justify-center flex-col gap-10">
@@ -46,6 +46,6 @@ function Footer() {
       </div>
     </section>
   );
-}
+};
 
 export default Footer;

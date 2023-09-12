@@ -4,7 +4,7 @@ import Link from "next/link";
 import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 
-function Navbar() {
+const Navbar = () => {
   return (
     <header className="sm:px-16 px-8 py-8 absolute z-10 w-full ml-14 ">
       <div className="flex items-center gap-4 justify-between max-lg:flex-col">
@@ -54,6 +54,6 @@ function Navbar() {
       </div>
     </header>
   );
-}
+};
 
 export default Navbar;

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
+import Navbar from "@/components/Navbar/Navbar";
+import Hero from "@/components/Hero/Hero";
 import FeaturedMovies from "@/components/Featured/FeaturedMovies";
-import Footer from "@/components/Footer";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (

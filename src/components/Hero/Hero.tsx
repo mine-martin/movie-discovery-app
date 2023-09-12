@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 
-function Hero() {
+const Hero = () => {
   return (
     <section className="max-w-[1440px] flex xl:flex-row flex-col p-1 bg-hero bg-cover mx-auto">
       <div className=" xl:w-2/5 flex flex-col  items-start w-full sm:px-16 px-8 mt-[10rem] ml-1 pb-20">
@@ -56,6 +56,6 @@ function Hero() {
       </div>
     </section>
   );
-}
+};
 
 export default Hero;

@@ -3,7 +3,7 @@ import React from "react";
 
 type Props = {};
 
-function MoviePage({}: Props) {
+const MoviePage = ({}: Props) => {
   return (
     <section className="max-container pt-20 w-full">
       <div className="pt-20 flex items-center justify-evenly">

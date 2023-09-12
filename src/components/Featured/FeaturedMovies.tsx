@@ -3,7 +3,7 @@ import React from "react";
 import MovieCard from "./MovieCard";
 import Image from "next/image";
 
-function FeaturedMovies() {
+const FeaturedMovies = () => {
   return (
     <section className="max-container">
       <div className="flex flex-row justify-between gap-5">
@@ -27,6 +27,6 @@ function FeaturedMovies() {
       </div>
     </section>
   );
-}
+};
 
 export default FeaturedMovies;

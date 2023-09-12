@@ -6,7 +6,7 @@ import { AiFillStar, AiOutlineHeart } from "react-icons/ai";
 
 type Props = {};
 
-function MovieCard({}: Props) {
+const MovieCard = ({}: Props) => {
   return (
     <Link
       href="/movie"
@@ -69,40 +69,6 @@ function MovieCard({}: Props) {
       </div>
     </Link>
   );
-}
+};
 
 export default MovieCard;
-
-{
-  /* <div className=" flex flex-col w-fit max-sm:w-full p-4 justify-center outline">
-        <div className="relative flex items-center justify-center bg-black rounded-md ">
-          <img
-            src="/hero1.png"
-            alt="movie"
-            className="w-[200px] h-[300px] cover object-cover relative"
-          />
-          <div className="absolute top-0 right-0 p-2 bg-slate-300 rounded-full">
-            <a href="/">
-              <AiOutlineHeart />
-            </a>
-          </div>
-        </div>
-
-        <div className="flex gap-2 items-center justify-between mt-auto">
-          <h3 className="mt-3 text-[13px] leading-normal font-bold font-Montserrat ">
-            Something
-          </h3>
-          <p className="mt-2  leading-normal text-[12px]">Ksh:400</p>
-        </div>
-        <p className="text-[12px] mt-2 font-Montserrat">Something</p>
-        <div className="mt-2 flex justify-start gap-2">
-          <AiFillStar />
-          <p className="font-extralight text-[14px] leading-normal text-gray-500">
-            (5)
-          </p>
-        </div>
-        <div className="mt-4 leading-normal">
-          <button></button>
-        </div>
-      </div> */
-}
