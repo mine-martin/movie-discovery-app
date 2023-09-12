@@ -11,7 +11,7 @@ const movie = ({}: Props) => {
           <p className="text-[#333]">
             Lost in Time, is a captivating sci-fi adventure that explores the
             complexities of altering the past and the profound impact it can
-            have on one's future. With stunning visuals and a thought-provoking
+            have on one future. With stunning visuals and a thought-provoking
             storyline, this film takes audiences on an unforgettable voyage
             through the mysteries of time itself.
           </p>
@@ -46,8 +46,8 @@ const movie = ({}: Props) => {
                 className=" text-black font-poppins font-[500] text-[20px] bg-inherit "
               />
               <div className="flex absolute right-4 items-center font-extrabold">
-                <img
-                  src="/Expand.png"
+                <Image
+                  src={"/Expand.png"}
                   alt=""
                   width={30}
                   height={30}
@@ -60,11 +60,11 @@ const movie = ({}: Props) => {
         <div className="items-center w-full pb-4">
           <div className=" flex flex-col items-center justify-center gap-[24px]">
             <button className="w-full flex gap-[10px] bg-[#BE123C] text-white font-[500] text-[20px] font-poppins leading-normal items-center justify-center h-[55px] rounded-[10px]">
-              <img src="/ticket.png" alt="" width={24} height={24} />
+              <Image src={"/ticket.png"} alt="" width={24} height={24} />
               See Showtimes
             </button>
             <button className=" w-full flex gap-[10px] bg-[#F8E7EB] text-[#333] font-[500] text-[20px] font-poppins leading-normal items-center justify-center h-[55px] rounded-[10px] border border-[#BE123C]">
-              <img src="/List.png" alt="" width={24} height={24} />
+              <Image src={"/List.png"} alt="" width={24} height={24} />
               More watch options
             </button>
             <div className="w-full relative rounded-[15px]">
@@ -76,7 +76,7 @@ const movie = ({}: Props) => {
                 className="w-full"
               />
               <div className="absolute bottom-0 left-0 right-0 rounded-[15px] h-[52px] font-poppins flex bg-black bg-opacity-10 backdrop-blur-sm items-center justify-center text-[#E8E8E8] gap-[12px]">
-                <img src="/List2.svg" alt="" width={23} height={23} />
+                <Image src={"/List2.svg"} alt="" width={23} height={23} />
                 <p className="">The Best Movies Shows in September</p>
               </div>
             </div>
