@@ -9,7 +9,7 @@ const movie = ({}: Props) => {
       <div className="flex justify-between gap-[24px] items-center">
         <div className="font-poppins font-[400] text-[20px]">
           <p className="text-[#333]">
-            'Lost in Time' is a captivating sci-fi adventure that explores the
+            Lost in Time, is a captivating sci-fi adventure that explores the
             complexities of altering the past and the profound impact it can
             have on one's future. With stunning visuals and a thought-provoking
             storyline, this film takes audiences on an unforgettable voyage
