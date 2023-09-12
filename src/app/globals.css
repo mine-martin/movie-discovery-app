@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.white-placeholder::placeholder {
+  color: white;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
