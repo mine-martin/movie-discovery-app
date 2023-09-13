@@ -7,8 +7,8 @@ const movie = ({}: Props) => {
   return (
     <div className="relative items-center">
       <div className="flex justify-between gap-[24px] items-center">
-        <div className="font-poppins font-[400] text-[20px]">
-          <p className="text-[#333]">
+        <div className="font-normal text-xl font-poppins">
+          <p className="text-[#333] font-Popp">
             Lost in Time, is a captivating sci-fi adventure that explores the
             complexities of altering the past and the profound impact it can
             have on one future. With stunning visuals and a thought-provoking
@@ -36,14 +36,14 @@ const movie = ({}: Props) => {
                 </span>
               </p>
             </div>
-            <div className="w-full mt-6 flex items-center  gap-2 border border-[#C7C7C7]  rounded-[10px] text-white">
-              <button className="w-[253px] text-white bg-[#BE123C] h-[55px] rounded-[10px]">
+            <div className="w-full mt-6 flex items-center  gap-2 border border-[#C7C7C7] h-[55px] rounded-[10px] text-white">
+              <button className="text-white bg-[#BE123C] w-[253px]  h-[55px] rounded-[10px] text-xl">
                 Top rated movie #25
               </button>
               <input
                 type="text"
                 placeholder="5 Awards Nominated"
-                className=" text-black font-poppins font-[500] text-[20px] bg-inherit "
+                className=" text-[333] font-poppins font-medium text-xl bg-inherit "
               />
               <div className="flex absolute right-4 items-center font-extrabold">
                 <Image
@@ -59,12 +59,12 @@ const movie = ({}: Props) => {
         </div>
         <div className="items-center w-full pb-4">
           <div className=" flex flex-col items-center justify-center gap-[24px]">
-            <button className="w-full flex gap-[10px] bg-[#BE123C] text-white font-[500] text-[20px] font-poppins leading-normal items-center justify-center h-[55px] rounded-[10px]">
-              <Image src={"/ticket.png"} alt="" width={24} height={24} />
+            <button className="w-full flex gap-[10px] bg-[#BE123C] text-white font-medium text-xl font-poppins leading-normal items-center justify-center h-[55px] rounded-[10px]">
+              <Image src={"/ticket.png"} alt="" width={25} height={25} />
               See Showtimes
             </button>
-            <button className=" w-full flex gap-[10px] bg-[#F8E7EB] text-[#333] font-[500] text-[20px] font-poppins leading-normal items-center justify-center h-[55px] rounded-[10px] border border-[#BE123C]">
-              <Image src={"/List.png"} alt="" width={24} height={24} />
+            <button className="w-full flex gap-[10px] bg-[#F8E7EB] text-[#333] font-medium text-xl font-poppins leading-normal items-center justify-center h-[55px] rounded-[10px] border border-[#BE123C]">
+              <Image src={"/List.png"} alt="" width={23} height={23} />
               More watch options
             </button>
             <div className="w-full relative rounded-[15px]">
