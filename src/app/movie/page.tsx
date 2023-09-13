@@ -14,7 +14,13 @@ const MoviePage = ({}: Props) => {
         <div className="w-full relative">
           <Image src="/movie.png" alt="" height={600} width={1440} />
           <div className="absolute inset-0 flex items-center justify-center">
-            <Image src="/Play.svg" alt="" width={54} height={54} />
+            <div>
+              <Image src="/Play.svg" alt="" width={54} height={54} />
+              <p className="absolute font-medium font-poppins text-[#E8E8E8] text-2xl mr-5">
+                Watch Trailer
+              </p>
+            </div>
+
             <Image
               src="/Ellipse4.svg"
               alt=""

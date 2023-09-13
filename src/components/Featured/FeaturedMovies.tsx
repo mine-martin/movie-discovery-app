@@ -1,9 +1,33 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
 import Image from "next/image";
+import axios from "axios";
 
 const FeaturedMovies = () => {
+  const [movie, setMovie] = useState([]);
+
+  useEffect(() => {
+    const options = {
+      method: "GET",
+      url: "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
+      headers: {
+        accept: "application/json",
+        Authorization:
+          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5ZmQ4YzhkZjRjZThiY2ZkYmY3MDU0ZjhmMDY0OGZjNiIsInN1YiI6IjY0ZmVhYjE0ZTBjYTdmMDEwZGU5NDRlYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.VuqL6ISDMxgNuq3j4pDv3RXhEb025TlipXb6eO5B5qI",
+      },
+    };
+
+    axios
+      .request(options)
+      .then((response) => {
+        setMovie(response.data);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
   return (
     <section className="max-container">
       <div className="flex flex-row justify-between gap-5">
@@ -16,14 +40,9 @@ const FeaturedMovies = () => {
         </div>
       </div>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-6 gap-14 mt-10">
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
-        <MovieCard />
+        {movie.map((data, id) => (
+          <MovieCard key={id} data={data} id={id} />
+        ))}
       </div>
     </section>
   );

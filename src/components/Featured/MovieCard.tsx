@@ -6,7 +6,9 @@ import { AiFillStar, AiOutlineHeart } from "react-icons/ai";
 
 type Props = {};
 
-const MovieCard = ({}: Props) => {
+const MovieCard = ({ data, id }: { data: any; id: any }) => {
+
+  
   return (
     <Link
       href="/movie"
