@@ -1,13 +1,12 @@
 "use client";
-
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
 import Image from "next/image";
 import axios from "axios";
 
-const FeaturedMovies = () => {
-  const [movie, setMovie] = useState([]);
+const FeaturedMovies = ({ movie }: { movie: any }) => {
+  // const [movie, setMovie] = useState([]);
 
   useEffect(() => {
     const options = {
@@ -44,7 +43,7 @@ const FeaturedMovies = () => {
         </div>
       </div>
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:gap-6 gap-14 mt-10">
-        {movie.map((data, id) => (
+        {movie.map((data: any, id: React.Key | null | undefined) => (
           <MovieCard key={id} data={data} id={id} />
         ))}
       </div>
@@ -53,3 +52,7 @@ const FeaturedMovies = () => {
 };
 
 export default FeaturedMovies;
+
+function setMovie(arg0: any) {
+  throw new Error("Function not implemented.");
+}

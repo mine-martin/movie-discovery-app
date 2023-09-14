@@ -16,12 +16,8 @@ const Hero = () => {
     verticalSwiping: true,
     autoplay: true,
     autoplaySpeed: 5000,
-    beforeChange: function (currentSlide: any, nextSlide: any) {
-      console.log("before change", currentSlide, nextSlide);
-    },
-    afterChange: function (currentSlide: any) {
-      console.log("after change", currentSlide);
-    },
+    beforeChange: function (currentSlide: any, nextSlide: any) {},
+    afterChange: function (currentSlide: any) {},
     appendDots: (
       dots:
         | string
