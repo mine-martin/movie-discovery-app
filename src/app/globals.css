@@ -8,3 +8,34 @@
   font-style: normal;
   font-weight: 400;
 }
+
+.slick-dots {
+  top: 0;
+  right: 0;
+  background: none;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.slick-dots > ul {
+  display: grid;
+  right: 0;
+  top: 35%;
+  position: absolute;
+  color: white;
+}
+/* Style the active pagination dot */
+.slick-dots .slick-active {
+  font-size: 1rem;
+  display: flex;
+  align-items: center; /* Center vertically */
+  padding: 10px -10px;
+}
+
+.slick-dots .slick-active:before {
+  content: "- ";
+
+  display: inline-block;
+  margin-right: 0.5rem;
+}

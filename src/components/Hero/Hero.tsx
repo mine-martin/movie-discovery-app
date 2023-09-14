@@ -1,59 +1,60 @@
+"use client";
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
+import HeroCard from "@/components/Hero/HeroCard";
 import React from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 const Hero = () => {
-  return (
-    <section className="max-w-[1440px] flex xl:flex-row flex-col p-1 bg-hero bg-cover mx-auto">
-      <div className=" xl:w-2/5 flex flex-col  items-start w-full sm:px-16 px-8 mt-[10rem] ml-1 pb-20">
-        <p className="text-[40px] font-bold text-white mt-4 pt-30">
-          john Wick 3:
-          <br />
-          pallebulum
-        </p>
-        <div className="mt-2 flex gap-10">
-          <p className="text-white flex gap-2 items-center">
-            <span className="flex gap-3">
-              <Image
-                src={"/imdb.svg"}
-                width={35}
-                height={17}
-                alt="imdb"
-                priority={true}
-              />
-              <span className="text-white font-medium text-xs">800/100</span>
-            </span>
-          </p>
-          <p className="text-white ml-8 flex gap-2 items-center">
-            <span className="flex gap-3">
-              <Image
-                src={"/tomato.svg"}
-                width={16}
-                height={17}
-                alt="tomato"
-                priority={true}
-              />
-              <span className="text-white font-medium">97%</span>
-            </span>
-          </p>
-        </div>
-        <p className="text-sm text-white font-medium mt-4 mb-4 sm:max-w-sm">
-          Discover new things Discover new things Discover new things Discover
-          new things Discover new things Discover new things Discover new things
-        </p>
-        <button className="bg-rose-700 px-1.5 py-4 rounded-md flex gap-2 ">
-          <Image
-            src={"/play.svg"}
-            width={20}
-            height={20}
-            alt="tomato"
-            priority={true}
-          />
-          <span className="text-white font-bold uppercase text-sm">
-            WATCH TRAILER
-          </span>
-        </button>
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    vertical: true,
+    verticalSwiping: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    beforeChange: function (currentSlide: any, nextSlide: any) {
+      console.log("before change", currentSlide, nextSlide);
+    },
+    afterChange: function (currentSlide: any) {
+      console.log("after change", currentSlide);
+    },
+    appendDots: (
+      dots:
+        | string
+        | number
+        | boolean
+        | React.ReactElement<any, string | React.JSXElementConstructor<any>>
+        | Iterable<React.ReactNode>
+        | React.ReactPortal
+        | React.PromiseLikeOfReactNode
+        | null
+        | undefined
+    ) => (
+      <div>
+        <ul style={{ margin: "0px" }}> {dots} </ul>
       </div>
+    ),
+    customPaging: (i: number) => (
+      <div className="custompagination ">{i + 1}</div>
+    ),
+  };
+  return (
+    <section className="w-full flex xl:flex-row flex-col mx-auto relative">
+      <Slider {...settings}>
+        <HeroCard />
+        <HeroCard />
+        <HeroCard />
+        <HeroCard />
+        {/* {heroData.map((data, id) => (
+          <section key={id}>
+            <HeroCard {...data} />
+          </section>
+        ))} */}
+      </Slider>
     </section>
   );
 };

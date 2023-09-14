@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { AiOutlineSearch } from "react-icons/ai";
+import Search from "../Search/Search";
 
 const Navbar = () => {
   return (
@@ -24,16 +25,7 @@ const Navbar = () => {
           </Link>
         </div>
 
-        <div className="lg:max-w-[40%] w-full flex items-center max-sm:flex-col gap-2 p-2 lg:border lg:border-white rounded-lg text-white">
-          <input
-            type="text"
-            placeholder="What do you want to watch?"
-            className="sm:flex-1 max-sm:w-full text-base leading-normal text-white pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-white max-sm:rounded-full bg-inherit white-placeholder"
-          />
-          <nav className="flex max-sm:justify-end items-center max-sm:w-full font-bold w-[16px] h-[16px]">
-            <AiOutlineSearch />
-          </nav>
-        </div>
+        <Search />
 
         <div className="ml-20">
           <ul className="flex-1 flex justify-center items-center gap-4 max-lg:hidden">
@@ -50,6 +42,7 @@ const Navbar = () => {
               />
             </a>
           </ul>
+          S
         </div>
       </div>
     </header>

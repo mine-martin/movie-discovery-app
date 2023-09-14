@@ -1,3 +1,5 @@
+"use client";
+
 /* eslint-disable @next/next/no-img-element */
 import React, { useState, useEffect } from "react";
 import MovieCard from "./MovieCard";
@@ -10,7 +12,8 @@ const FeaturedMovies = () => {
   useEffect(() => {
     const options = {
       method: "GET",
-      url: "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
+      url: "https://api.themoviedb.org/3/trending/all/day",
+      // url: "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
       headers: {
         accept: "application/json",
         Authorization:
@@ -21,7 +24,8 @@ const FeaturedMovies = () => {
     axios
       .request(options)
       .then((response) => {
-        setMovie(response.data);
+        console.log("data:", response.data);
+        setMovie(response.data.results.slice(0, 10));
       })
       .catch((error) => {
         console.error(error);
