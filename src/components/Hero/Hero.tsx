@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-const Hero = () => {
+const Hero = ({ movie }: { movie: any }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -39,17 +39,11 @@ const Hero = () => {
     ),
   };
   return (
-    <section className="w-full flex xl:flex-row flex-col mx-auto relative">
+    <section className="w-[1440px] flex xl:flex-row flex-col mx-auto relative">
       <Slider {...settings}>
-        <HeroCard />
-        <HeroCard />
-        <HeroCard />
-        <HeroCard />
-        {/* {heroData.map((data, id) => (
-          <section key={id}>
-            <HeroCard {...data} />
-          </section>
-        ))} */}
+        {movie.map((data: any, id: React.Key | null | undefined) => (
+          <HeroCard key={id} data={data} />
+        ))}
       </Slider>
     </section>
   );

@@ -7,7 +7,7 @@ import Search from "../Search/Search";
 
 const Navbar = () => {
   return (
-    <header className="sm:px-16 px-8 py-8 absolute z-10 w-full ml-14 ">
+    <header className="sm:px-16 px-8 py-8 absolute z-10 w-full">
       <div className="flex items-center gap-4 justify-between max-lg:flex-col">
         <div className="mr-20">
           {" "}

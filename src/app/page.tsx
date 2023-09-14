@@ -33,14 +33,14 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="w-max bg-white">
+    <main className="w-max bg-white px-0">
       <section>
         <Navbar />
       </section>
       <section className="">
-        <Hero />
+        <Hero movie={movie} />
       </section>
-      <section className="sm:px-[1rem] px-8 sm:py-5 py-4 ">
+      <section className=" px-1 sm:py-5 py-4 ">
         <FeaturedMovies movie={movie} />
       </section>
       <section className="">
