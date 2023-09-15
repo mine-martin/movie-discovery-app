@@ -19,7 +19,7 @@ const MovieCard = ({ data, id }: { data: any; id: any }) => {
           height={370}
         />
         <article className="absolute top-0 right-0 p-2 mr-2 mt-2 bg-slate-300 rounded-full">
-          <Link href="/">
+          <Link href="/" className="items-center">
             <AiOutlineHeart />
           </Link>
         </article>
