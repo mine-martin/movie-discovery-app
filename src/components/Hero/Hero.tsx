@@ -41,9 +41,11 @@ const Hero = ({ movie }: { movie: any }) => {
   return (
     <section className="w-[1440px] flex xl:flex-row flex-col mx-auto relative">
       <Slider {...settings}>
-        {movie.map((data: any, id: React.Key | null | undefined) => (
-          <HeroCard key={id} data={data} />
-        ))}
+        {movie
+          .slice(0, 5)
+          .map((data: any, id: React.Key | null | undefined) => (
+            <HeroCard key={id} data={data} />
+          ))}
       </Slider>
     </section>
   );

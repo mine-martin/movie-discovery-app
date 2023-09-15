@@ -7,7 +7,7 @@ const movie = ({}: Props) => {
   return (
     <div className="relative items-center">
       <div className="flex justify-between gap-[24px] items-center">
-        <div className="font-normal text-xl font-poppins">
+        <div className="font-normal text-xl ">
           <p className="text-[#333] font-Popp">
             Lost in Time, is a captivating sci-fi adventure that explores the
             complexities of altering the past and the profound impact it can
@@ -43,7 +43,7 @@ const movie = ({}: Props) => {
               <input
                 type="text"
                 placeholder="5 Awards Nominated"
-                className=" text-[333] font-poppins font-medium text-xl bg-inherit "
+                className=" text-[333]  font-medium text-xl bg-inherit "
               />
               <div className="flex absolute right-4 items-center font-extrabold">
                 <Image
@@ -59,11 +59,11 @@ const movie = ({}: Props) => {
         </div>
         <div className="items-center w-full pb-4">
           <div className=" flex flex-col items-center justify-center gap-[24px]">
-            <button className="w-full flex gap-[10px] bg-[#BE123C] text-white font-medium text-xl font-poppins leading-normal items-center justify-center h-[55px] rounded-[10px]">
+            <button className="w-full flex gap-[10px] bg-[#BE123C] text-white font-medium text-xl  leading-normal items-center justify-center h-[55px] rounded-[10px]">
               <Image src={"/ticket.png"} alt="" width={25} height={25} />
               See Showtimes
             </button>
-            <button className="w-full flex gap-[10px] bg-[#F8E7EB] text-[#333] font-medium text-xl font-poppins leading-normal items-center justify-center h-[55px] rounded-[10px] border border-[#BE123C]">
+            <button className="w-full flex gap-[10px] bg-[#F8E7EB] text-[#333] font-medium text-xl  leading-normal items-center justify-center h-[55px] rounded-[10px] border border-[#BE123C]">
               <Image src={"/List.png"} alt="" width={23} height={23} />
               More watch options
             </button>
@@ -75,7 +75,7 @@ const movie = ({}: Props) => {
                 height={229}
                 className="w-full"
               />
-              <div className="absolute bottom-0 left-0 right-0 rounded-[15px] h-[52px] font-poppins flex bg-black bg-opacity-10 backdrop-blur-sm items-center justify-center text-[#E8E8E8] gap-[12px]">
+              <div className="absolute bottom-0 left-0 right-0 rounded-[15px] h-[52px]  flex bg-black bg-opacity-10 backdrop-blur-sm items-center justify-center text-[#E8E8E8] gap-[12px]">
                 <Image src={"/List2.svg"} alt="" width={23} height={23} />
                 <p className="">The Best Movies Shows in September</p>
               </div>

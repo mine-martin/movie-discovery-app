@@ -39,3 +39,28 @@
   display: inline-block;
   margin-right: 0.5rem;
 }
+
+@layer components {
+  .max-container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .movie-cont {
+    width: 1512px;
+    height: 982px;
+  }
+  .sidebar {
+    width: 226px;
+    height: 982px;
+    flex-shrink: 0;
+  }
+}
+
+/* card */
+.movie-card {
+  @apply grid lg:grid-cols-4 md:grid-cols-3 max-sm:grid-cols-2 grid-cols-1 sm:gap-6  max-sm:gap-[10px] gap-[80px] mt-10;
+}
+
+.movie-overview {
+  @apply max-container pt-5 movie-cont pl-10 pr-10 w-full mt-5 mb-[10rem] h-full p-4 flex gap-[24px];
+}

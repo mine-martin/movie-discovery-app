@@ -5,11 +5,10 @@ import React from "react";
 const HeroCard = ({ data }: { data: any }) => {
   return (
     <section className="w-full flex xl:flex-row flex-col p-1 bg-hero bg-cover mx-auto">
-      <div className=" xl:w-2/5 flex flex-col  items-start w-full sm:px-16 px-8 mt-[10rem] ml-1 pb-20">
-        <p className="text-[40px] font-bold text-white mt-4 pt-30">
-          {" "}
-          <br />
+      <div className=" xl:w-2/5 flex flex-col  items-start w-full sm:px-16 px-8 mt-[12rem] ml-1 pb-20">
+        <p className="text-[40px] font-bold text-white mt-[3rem] ">
           {data.title}
+          <br/>
         </p>
         <div className="mt-2 flex gap-10">
           <p className="text-white flex gap-2 items-center">
@@ -42,7 +41,7 @@ const HeroCard = ({ data }: { data: any }) => {
         <p className="text-sm text-white font-medium mt-4 mb-4 sm:max-w-sm">
           {data.overview}
         </p>
-        <button className="bg-rose-700 px-1.5 py-4 rounded-md flex gap-2 ">
+        <button className="bg-rose-700 px-1.5 py-4 rounded-md flex gap-2">
           <Image
             src={"/play.svg"}
             width={20}

@@ -1,3 +1,4 @@
+import Sidebar from "@/components/Sidebar/Sidebar";
 import "../globals.css";
 import type { Metadata } from "next";
 import { DM_Sans, Inter } from "next/font/google";
@@ -14,5 +15,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <main className={inter.className}>{children}</main>;
+  return (
+    <main className={inter.className}>
+      {children}
+    </main>
+  );
 }

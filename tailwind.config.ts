@@ -1,39 +1,41 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       fontSize: {
-        xs: ['12px', '16px'],
-        sm: ['14px', '20px'],
-        base: ['16px', '19.5px'],
-        lg: ['18px', '21.94px'],
-        xl: ['20px', '24.38px'],
-        '2xl': ['24px', '29.26px'],
-        '3xl': ['28px', '50px'],
-        '4xl': ['48px', '58px'],
-        '8xl': ['96px', '106px']
+        xs: ["12px", "16px"],
+        sm: ["14px", "20px"],
+        base: ["16px", "19.5px"],
+        lg: ["18px", "21.94px"],
+        xl: ["20px", "24.38px"],
+        "2xl": ["24px", "29.26px"],
+        "3xl": ["28px", "50px"],
+        "4xl": ["48px", "58px"],
+        "8xl": ["96px", "106px"],
       },
-     
+
       screens: {
-        "wide": "1440px"
+        wide: "1440px",
+        sm: "640px",
+        md: "768px",
+        lg: "960px",
+        xl: "1200px",
       },
       backgroundImage: {
-        'hero': "url('/hero.png')",
-       
+        hero: "url('/hero.png')",
       },
       fontFamily: {
-        palanquin: ['Palanquin', 'sans-serif'],
-        montserrat: ['Montserrat', 'sans-serif'],
+        palanquin: ["Palanquin", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
       },
-    
     },
   },
   plugins: [],
-}
-export default config
+};
+export default config;
