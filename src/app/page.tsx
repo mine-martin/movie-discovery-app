@@ -14,7 +14,6 @@ export default function Home() {
     const options = {
       method: "GET",
       // url: "https://api.themoviedb.org/3/trending/all/day",
-
       url: "https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1",
       headers: {
         accept: "application/json",
@@ -34,14 +33,14 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="w-max bg-white px-0">
+    <main className="w-full bg-white">
       <section>
         <Navbar />
       </section>
-      <section className="">
+      <section className=" wide:sm:pb-24 pb-12">
         <Hero movie={movie} />
       </section>
-      <section className=" px-1 sm:py-5 py-4 ">
+      <section className="py-4 sm:px-[10rem] ">
         <FeaturedMovies movie={movie} />
       </section>
       <section className="">
