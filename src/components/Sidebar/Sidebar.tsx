@@ -88,7 +88,7 @@ const Sidebar = ({ movieid }: { movieid: any }) => {
           </div>
         </div>
         <Link href="/">
-          <div className={"w-max absolute max-lg:-top-0"}>
+          <div className="w-max absolute max-lg:-top-0 max-md:hidden">
             <div className="mt-[5px] flex lg:gap-[15px] max-lg:gap-0 text-[20px] w-[226px] h-[82px] items-center justify-center ">
               <span>
                 <Image src="/logout.svg" alt="" width={25} height={25} />

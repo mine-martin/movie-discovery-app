@@ -33,7 +33,7 @@ const movie = ({ movieDetails }: any) => {
               </p>
             </div>
             <div className="w-full mt-6 flex items-center  gap-2 border border-[#C7C7C7] h-[55px] rounded-[10px] text-white">
-              <button className="text-white bg-[#BE123C] w-[253px]  h-[55px] text-xl rounded-[10px] max-sm:w-[100px] max-xs:w-[70px] max-xs:text-[8px]">
+              <button className="text-white bg-[#BE123C] w-[253px]  h-[55px] text-xl rounded-[10px] max-sm:w-[100px] max-xs:w-[70px] max-md:text-[11px]">
                 Top rated movie #25
               </button>
               <input
@@ -55,12 +55,18 @@ const movie = ({ movieDetails }: any) => {
         </div>
         <div className="items-center w-full pb-4">
           <div className=" flex flex-col items-center justify-center gap-[24px]">
-            <button className="w-full flex gap-[10px] bg-[#BE123C] text-white font-medium text-xl  leading-normal items-center justify-center h-[55px] rounded-[10px]">
+            <button className="w-full flex gap-[10px] bg-[#BE123C] text-white font-poppins font-medium text-xl  leading-normal items-center justify-center h-[55px] rounded-[10px]">
               <Image src={"/ticket.png"} alt="" width={25} height={25} />
               See Showtimes
             </button>
-            <button className="w-full flex gap-[10px] bg-[#F8E7EB] text-[#333] font-medium text-xl  leading-normal items-center justify-center h-[55px] rounded-[10px] border border-[#BE123C]">
-              <Image src={"/List.png"} alt="" width={23} height={23} />
+            <button className="max-xs:text-[10px] w-full flex gap-[10px] bg-[#F8E7EB] text-[#333] font-[500] text-[20px] font-poppins leading-normal items-center justify-center h-[55px] rounded-[10px] border border-[#BE123C]">
+              <Image
+                src={"/List.png"}
+                alt=""
+                width={23}
+                height={23}
+                className="max-xs:w-[15px]"
+              />
               More watch options
             </button>
             <div className="w-full relative rounded-[15px]">
@@ -71,7 +77,7 @@ const movie = ({ movieDetails }: any) => {
                 height={229}
                 className="w-full"
               />
-              <div className="absolute bottom-0 left-0 right-0 rounded-[15px] h-[52px]  flex bg-black bg-opacity-10 backdrop-blur-sm items-center justify-center text-[#E8E8E8] gap-[12px]">
+              <div className="absolute bottom-0 left-0 right-0 rounded-[15px] h-[52px] font-poppins flex bg-black bg-opacity-10 backdrop-blur-sm items-center justify-center text-[#E8E8E8] gap-[12px]">
                 <Image src={"/List2.svg"} alt="" width={23} height={23} />
                 <p className="">The Best Movies Shows in September</p>
               </div>
