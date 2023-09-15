@@ -5,9 +5,13 @@ import React from "react";
 import Moviepage from "./moviepage";
 import Movie from "./movie";
 
-type Props = {};
-
-const MovieCard = ({}: Props) => {
+const MovieCard = ({
+  movieData,
+  movieid,
+}: {
+  movieData: any;
+  movieid: any;
+}) => {
   return (
     <section className="max-container w-full mt-5 mb-[10rem] h-full relative">
       <Link href="/">
@@ -34,10 +38,10 @@ const MovieCard = ({}: Props) => {
       <div className="pt-5 flex flex-col justify-evenly ">
         <div className="items-center ">
           <div className="mt-5 relative">
-            <Moviepage />
+            <Moviepage movie={movieData} />
           </div>
           <div className="mt-5 relative">
-            <Movie />
+            <Movie movie={movieData} />
           </div>
         </div>
       </div>

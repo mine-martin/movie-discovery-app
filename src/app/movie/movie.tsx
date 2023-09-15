@@ -3,7 +3,7 @@ import React from "react";
 
 type Props = {};
 
-const movie = ({}: Props) => {
+const movie = ({ movieData }: any) => {
   return (
     <div className="relative items-center">
       <div className="flex justify-between gap-[24px] items-center">

@@ -23,7 +23,6 @@ const FeaturedMovies = ({ movie }: { movie: any }) => {
     axios
       .request(options)
       .then((response) => {
-        console.log("data:", response.data);
         setMovie(response.data.results.slice(0, 10));
       })
       .catch((error) => {

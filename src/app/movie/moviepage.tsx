@@ -3,7 +3,7 @@ import React from "react";
 
 type Props = {};
 
-const moviepage = ({}: Props) => {
+const moviepage = ({ movieData }: any) => {
   return (
     <div className="flex items-center justify-between mt-4">
       <div className="font-extrabold text-[23px] mb-2 mt-2  flex items-center gap-4 text-[#404040]">

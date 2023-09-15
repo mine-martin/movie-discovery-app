@@ -1,23 +1,40 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import { AiOutlineSearch } from "react-icons/ai";
+import Image from "next/image";
+import MovieCard from "../Featured/MovieCard";
 
-const Search = () => {
+const MovieSearch = () => {
   const [term, setTerm] = useState("");
   const [loading, setLoading] = useState(false);
-  const [results, setResults] = useState([]);
+  // const [movie, setMovie] = useState(null);
+  const [movie, setMovie] = useState<any>(null); // Explicitly specify 'any' type here
 
-  const apiKey = process.env.NEXT_PUBLIC_APIKEY;
+  const options = {
+    method: "GET",
+    url: `https://api.themoviedb.org/3/search/movie?query=${term}&include_adult=false&language=en-US&page=1`,
+    headers: {
+      accept: "application/json",
+      Authorization:
+        "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5ZmQ4YzhkZjRjZThiY2ZkYmY3MDU0ZjhmMDY0OGZjNiIsInN1YiI6IjY0ZmVhYjE0ZTBjYTdmMDEwZGU5NDRlYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.VuqL6ISDMxgNuq3j4pDv3RXhEb025TlipXb6eO5B5qI",
+    },
+  };
 
-  const searchMovies = async () => {
+  const searchMovie = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(
-        `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${term}`
-      );
-      setResults(response.data.results);
+      const response = await axios.request(options);
+      const firstResult = response.data.results[0];
+      console.log("first123", firstResult);
+      if (firstResult) {
+        // If there's a result, set the first movie found.
+        setMovie(firstResult);
+      } else {
+        // If no results are found, reset the movie state.
+        setMovie(null);
+      }
     } catch (error) {
-      console.error("No movie with that name", error);
+      console.error("Error searching for the movie", error);
     } finally {
       setLoading(false);
     }
@@ -27,16 +44,68 @@ const Search = () => {
     <div className="lg:max-w-[40%] w-full flex items-center max-sm:flex-col gap-2 p-2 lg:border lg:border-white rounded-lg text-white">
       <input
         type="text"
-        placeholder="What do you want to watch?"
+        placeholder="Search for a movie..."
         className="sm:flex-1 max-sm:w-full text-base leading-normal text-white pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-white max-sm:rounded-full bg-inherit white-placeholder"
         value={term}
         onChange={(e) => setTerm(e.target.value)}
       />
-      <nav className="flex max-sm:justify-end items-center max-sm:w-full font-bold w-[16px] h-[16px]">
+      <button
+        className="flex max-sm:justify-end items-center max-sm:w-full font-bold w-[16px] h-[16px]"
+        onClick={searchMovie}
+        disabled={loading}
+      >
         <AiOutlineSearch />
-      </nav>
+      </button>
+
+      <div className="absolute mt-[40rem] width-[30rem]">
+        {movie && <MovieCard data={movie} id={movie.id} />}
+      </div>
     </div>
   );
 };
 
-export default Search;
+export default MovieSearch;
+
+// import React, { useEffect, useState } from "react";
+// import axios from "axios";
+// import { AiOutlineSearch } from "react-icons/ai";
+
+// const Search = () => {
+//   const [term, setTerm] = useState("");
+//   const [loading, setLoading] = useState(false);
+//   const [results, setResults] = useState([]);
+
+//   const apiKey = process.env.NEXT_PUBLIC_APIKEY;
+
+//   const searchMovies = async () => {
+//     try {
+//       setLoading(true);
+//       const response = await axios.get(
+//         `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${term}`
+//       );
+//       setResults(response.data.results);
+//       console.log("first122", response.data.results);
+//     } catch (error) {
+//       console.error("No movie with that name", error);
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
+//   return (
+//     <div className="lg:max-w-[40%] w-full flex items-center max-sm:flex-col gap-2 p-2 lg:border lg:border-white rounded-lg text-white">
+//       <input
+//         type="text"
+//         placeholder="What do you want to watch?"
+//         className="sm:flex-1 max-sm:w-full text-base leading-normal text-white pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-white max-sm:rounded-full bg-inherit white-placeholder"
+//         value={term}
+//         onChange={(e) => setTerm(e.target.value)}
+//       />
+//       <nav className="flex max-sm:justify-end items-center max-sm:w-full font-bold w-[16px] h-[16px]">
+//         <AiOutlineSearch />
+//       </nav>
+//     </div>
+//   );
+// };
+
+// export default Search;
