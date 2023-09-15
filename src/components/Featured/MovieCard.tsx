@@ -2,14 +2,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { AiFillStar, AiOutlineHeart } from "react-icons/ai";
-
-type Props = {};
+import { AiOutlineHeart } from "react-icons/ai";
 
 const MovieCard = ({ data, id }: { data: any; id: any }) => {
   return (
     <Link
-      href={`/movie?id=${data.id}`}
+      href={`/movie/${data.id}`}
       className=" hover:scale-102 rounded-md hover:shadow-lg transform transition duration-100 ease-in-out"
     >
       <div className="bg-white pb-4 justify-between items-start gap-3">

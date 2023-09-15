@@ -3,18 +3,12 @@ import React from "react";
 
 type Props = {};
 
-const movie = ({ movieData }: any) => {
+const movie = ({ movieDetails }: any) => {
   return (
     <div className="relative items-center">
       <div className="flex justify-between gap-[24px] items-center">
         <div className="font-normal text-xl ">
-          <p className="text-[#333] font-Popp">
-            Lost in Time, is a captivating sci-fi adventure that explores the
-            complexities of altering the past and the profound impact it can
-            have on one future. With stunning visuals and a thought-provoking
-            storyline, this film takes audiences on an unforgettable voyage
-            through the mysteries of time itself.
-          </p>
+          <p className="text-[#333] font-Popp">{movieDetails.overview}</p>
           <div className="relative mt-10">
             <div className="flex flex-col gap-[31px] font-[400] text-[20px]">
               <p className="text-[#333]">

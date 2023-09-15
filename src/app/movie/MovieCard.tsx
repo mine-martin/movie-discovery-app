@@ -4,19 +4,19 @@ import Link from "next/link";
 import React from "react";
 import Moviepage from "./moviepage";
 import Movie from "./movie";
+import { useParams } from "next/navigation";
 
-const MovieCard = ({
-  movieData,
-  movieid,
-}: {
-  movieData: any;
-  movieid: any;
-}) => {
+const MovieCard = ({ movieDetails }: any) => {
   return (
     <section className="max-container w-full mt-5 mb-[10rem] h-full relative">
       <Link href="/">
         <div className="w-full relative">
-          <Image src="/movie.png" alt="" height={600} width={1440} />
+          <Image
+            src={`https://www.themoviedb.org/t/p/w220_and_h330_face${movieDetails.backdrop_path}`}
+            alt=""
+            height={600}
+            width={1440}
+          />
           <div className="absolute inset-0 flex items-center justify-center">
             <div>
               <Image src="/Play.svg" alt="" width={54} height={54} />
@@ -38,10 +38,10 @@ const MovieCard = ({
       <div className="pt-5 flex flex-col justify-evenly ">
         <div className="items-center ">
           <div className="mt-5 relative">
-            <Moviepage movie={movieData} />
+            <Moviepage movieDetails={movieDetails} />
           </div>
           <div className="mt-5 relative">
-            <Movie movie={movieData} />
+            <Movie movieDetails={movieDetails} />
           </div>
         </div>
       </div>
