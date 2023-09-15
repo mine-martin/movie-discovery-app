@@ -19,7 +19,7 @@ const FeaturedMovies = ({ movie }: { movie: any }) => {
       </div>
       <div
         data-testid="movie-card"
-        className=" grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 grid-cols-2 sm:gap-6 gap-14 mt-10"
+        className=" grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 grid-cols-2 sm:gap-6 gap-4 mt-10"
       >
         {movie.map((data: any, id: React.Key | null | undefined) => (
           <MovieCard key={id} data={data} id={id} />
