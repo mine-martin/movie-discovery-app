@@ -14,26 +14,29 @@ const moviepage = ({ movieDetails }: any) => {
 
         {movieDetails.genres.map(
           (
-            genre:
-              | string
-              | number
-              | boolean
-              | React.ReactElement<
-                  any,
-                  string | React.JSXElementConstructor<any>
-                >
-              | Iterable<React.ReactNode>
-              | React.ReactPortal
-              | React.PromiseLikeOfReactNode
-              | null
-              | undefined,
+            genre: {
+              name:
+                | string
+                | number
+                | boolean
+                | React.ReactElement<
+                    any,
+                    string | React.JSXElementConstructor<any>
+                  >
+                | Iterable<React.ReactNode>
+                | React.ReactPortal
+                | React.PromiseLikeOfReactNode
+                | null
+                | undefined;
+            },
+
             id: React.Key | null | undefined
           ) => (
             <span
               className="inline-block border border-[#F8E7EB] rounded-[15px] px-3 py-1 text-sm font-[500] text-[#B91C1C] leading-normal"
               key={id}
             >
-              {genre}
+              {genre.name}
             </span>
           )
         )}

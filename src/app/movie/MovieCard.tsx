@@ -10,21 +10,21 @@ const MovieCard = ({ movieDetails }: any) => {
   return (
     <section className="max-container w-full mt-5 mb-[10rem] h-full relative">
       <Link href="/">
-        <div className="w-full relative">
-          <Image
-            src={`https://www.themoviedb.org/t/p/w220_and_h330_face${movieDetails.backdrop_path}`}
-            alt=""
-            height={600}
-            width={1440}
-          />
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div>
-              <Image src="/Play.svg" alt="" width={54} height={54} />
-              <p className="absolute font-medium  text-[#E8E8E8] text-2xl mr-5">
-                {/* Watch Trailer */}
-              </p>
+        <div className="w-full relative ">
+          <div className="relative bg-black bg-opacity-10 backdrop-blur-sm h-[475px] rounded-lg max-xs:h-[200px]">
+            <div className="h-full w-full relative">
+              <Image
+                src={`https://www.themoviedb.org/t/p/w220_and_h330_face${movieDetails.backdrop_path}`}
+                alt=""
+                layout="fill"
+                objectFit="cover"
+                className="rounded-lg"
+              />
             </div>
+          </div>
 
+          <div className="absolute inset-0 flex items-center justify-center">
+            <Image src="/play.svg" alt="" width={54} height={54} />
             <Image
               src="/Ellipse4.svg"
               alt=""
