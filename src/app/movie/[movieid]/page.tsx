@@ -18,7 +18,8 @@ const MoviePage = ({ params: { movieid, runtime } }: any) => {
         url: `https://api.themoviedb.org/3/movie/${movieid}?language=en-US`,
         headers: {
           accept: "application/json",
-          Authorization: "Bearer YOUR_API_KEY_HERE",
+          Authorization:
+            "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI5ZmQ4YzhkZjRjZThiY2ZkYmY3MDU0ZjhmMDY0OGZjNiIsInN1YiI6IjY0ZmVhYjE0ZTBjYTdmMDEwZGU5NDRlYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.VuqL6ISDMxgNuq3j4pDv3RXhEb025TlipXb6eO5B5qI",
         },
       };
 
