@@ -32,7 +32,7 @@ const Sidebar = () => {
         } absolute z-20 mt-4 ml-2 hover:cursor-pointer`}
         onClick={() => setSidebarVisible(!sidebarVisible)}
       >
-        <img src="/logo.svg" alt="" width={50} height={50} />
+        <Image src="/logo.svg" alt="" width={50} height={50} />
       </div>
       <div
         className={`sidebar relative rounded-r-[45px] border border-black border-opacity-30 transform transition-transform duration-300 ease-in-out ${
@@ -49,8 +49,8 @@ const Sidebar = () => {
           </Link>
         </div>
         <div className="mt-[90px]">
-          {sidebarData.map((data) => (
-            <Link href={data.path}>
+          {sidebarData.map((data, index) => (
+            <Link href={data.path} key={index}>
               <div
                 key={data.id}
                 className={`w-max  group-hover:opacity-100 transition-opacity duration-300 ease-in-out ${

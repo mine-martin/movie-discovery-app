@@ -1,7 +1,5 @@
-import { type } from "os";
+import Image from "next/image";
 import React from "react";
-
-type Props = {};
 
 const moviepage = ({ movieDetails }: any) => {
   return (
@@ -43,7 +41,8 @@ const moviepage = ({ movieDetails }: any) => {
       </div>
       <div className="ml-10">
         <div className="text-2xl flex items-center gap-2 justify-center  leading-normal">
-          <img src="/star.png" alt="" width={30} height={30} />
+          <Image src="/star.png" alt="" width={30} height={30} />
+
           <p className="text-[#E8E8E8] text-[25px] font-[500]">
             {movieDetails.popularity} <span>|</span>
           </p>
