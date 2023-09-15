@@ -37,7 +37,7 @@ export default function Home() {
       <section>
         <Navbar />
       </section>
-      <section className="">
+      <section className="wide:sm:pb-24 pb-12">
         <Hero movie={movie} />
       </section>
       <section className="py-4 sm:px-[10rem] ">

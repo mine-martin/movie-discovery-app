@@ -6,11 +6,13 @@ type Props = {};
 const movie = ({ movieDetails }: any) => {
   return (
     <div className="relative items-center">
-      <div className="flex justify-between gap-[24px] items-center">
-        <div className="font-normal text-xl ">
-          <p className="text-[#333] font-Popp">{movieDetails.overview}</p>
+      <div className="flex justify-between gap-[24px] items-center max-lg:flex-col max-xl:flex-col  max-lg:w-fit">
+        <div className="font-poppins font-[400] text-[17px] max-lg:text-[17px] max-sm:text-[10px]  ">
+          <p className="text-[#333]" data-testid="movie-overview">
+            {movieDetails.overview}
+          </p>
           <div className="relative mt-10">
-            <div className="flex flex-col gap-[31px] font-[400] text-[20px]">
+            <div className="flex flex-col gap-[31px] font-[400] text-[20px] max-lg:text-[10px]">
               <p className="text-[#333]">
                 Director :
                 <span className="text-[#BE123C]"> Joseph konsinki</span>
@@ -31,13 +33,13 @@ const movie = ({ movieDetails }: any) => {
               </p>
             </div>
             <div className="w-full mt-6 flex items-center  gap-2 border border-[#C7C7C7] h-[55px] rounded-[10px] text-white">
-              <button className="text-white bg-[#BE123C] w-[253px]  h-[55px] rounded-[10px] text-xl">
+              <button className="text-white bg-[#BE123C] w-[253px]  h-[55px] text-xl rounded-[10px] max-sm:w-[100px] max-xs:w-[70px] max-xs:text-[8px]">
                 Top rated movie #25
               </button>
               <input
                 type="text"
-                placeholder="5 Awards Nominated"
-                className=" text-[333]  font-medium text-xl bg-inherit "
+                placeholder="Awards 9 nominations"
+                className=" text-black font-poppins font-[500] text-[20px] max-xs:text-[10px] bg-inherit outline-none "
               />
               <div className="flex absolute right-4 items-center font-extrabold">
                 <Image

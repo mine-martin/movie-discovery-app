@@ -6,12 +6,10 @@ const HeroCard = ({ data }: { data: any }) => {
   return (
     <main className="relative w-full">
       <section className="w-full flex xl:flex-row flex-col p-1">
-        <div>
-          <div className="bg-no-repeat bg-cover bg-center h-[600px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
-            <Image src={data.imgURL} alt=" " layout="fill" objectFit="cover" />
-          </div>
+        <div className="bg-no-repeat bg-cover bg-center h-[600px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+          <Image src={data.imgURL} alt=" " layout="fill" objectFit="cover" />
         </div>
-        <div className="absolute xl:w-2/5 flex flex-col  items-start w-full sm:px-16 px-8 mt-[12rem] ml-1 pb-20">
+        <div className="absolute xl:w-2/5 flex flex-col  items-start w-full sm:px-16 px-8 mt-[12rem] ml-1 pb-20 sm:w-[80%] md:w-[70%] lg:w-[60%] mx-auto z-50">
           <p className="text-[40px] font-bold text-white mt-[3rem] ">
             {data.title}
             <br />
