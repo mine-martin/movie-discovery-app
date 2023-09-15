@@ -41,7 +41,7 @@ const MovieSearch = () => {
   };
 
   return (
-    <div className="lg:max-w-[40%] w-full flex items-center max-sm:flex-col gap-2 p-2 lg:border lg:border-white rounded-lg text-white">
+    <div className="lg:max-w-[40%] w-full flex items-center max-sm:flex-col gap-2 p-2 lg:border lg:border-white rounded-lg text-white sm:w-1/5">
       <input
         type="text"
         placeholder="Search for a movie..."
@@ -50,7 +50,7 @@ const MovieSearch = () => {
         onChange={(e) => setTerm(e.target.value)}
       />
       <button
-        className="flex max-sm:justify-end items-center max-sm:w-full font-bold w-[16px] h-[16px]"
+        className="flex max-sm:justify-end items-center max-sm:w-full font-bold w-[16px] h-[16px] sm:-mt-3 md:mt-0"
         onClick={searchMovie}
         // disabled={loading}
       >
