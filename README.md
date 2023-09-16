@@ -13,8 +13,10 @@ This is a movie discovery web application that allows users to search for movies
 
 To get started with the application, follow these steps:
 
-1. Git clone the project.
-2. `cd` to the project folder.
+1. Git clone the project
+   - `git clone https://github.com/mine-martin/movie-discovery-app.git` for https.
+   - `git clone git@github.com:mine-martin/movie-discovery-app.git` for ssh.
+2. `cd movie-discovery-app` to the project folder.
 3. Install packages with `npm install`.
 4. Run the application with `npm run dev`.
 5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
