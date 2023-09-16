@@ -33,7 +33,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="w-full bg-white">
+    <main className="w-full p-0 bg-white">
       <section>
         <Navbar />
       </section>

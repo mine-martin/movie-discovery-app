@@ -7,7 +7,7 @@ import axios from "axios";
 
 const FeaturedMovies = ({ movie }: { movie: any }) => {
   return (
-    <section className="max-container max-sm:mt-4">
+    <section className="max-container max-sm:mt-4 max-sm:px-1">
       <div className="flex flex-row justify-between gap-5">
         <p className=" text-black font-bold text-[36px]">Featured Movie</p>
         <div className="font-normal flex flex-row justify-between gap-2 text-rose-700 text-lg relative left-0">
