@@ -2,6 +2,7 @@ import Sidebar from "@/components/Sidebar/Sidebar";
 import "../globals.css";
 import type { Metadata } from "next";
 import { DM_Sans, Inter } from "next/font/google";
+import Footer from "@/components/Footer/Footer";
 
 const inter = DM_Sans({ subsets: ["latin"] });
 

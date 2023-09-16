@@ -11,7 +11,7 @@ import {
 const Footer = () => {
   return (
     <section className="mt-10 pt-10 pb-10 max-sm:mt-5">
-      <div className="flex items-center justify-center flex-col gap-10 max-sm:gap-6">
+      <div className="flex items-center justify-center flex-col gap-10 max-sm:gap-6 ">
         <div className="text-4xl flex flex-row gap-12">
           <Link href="/">
             <AiFillFacebook />
@@ -26,7 +26,7 @@ const Footer = () => {
             <AiFillYoutube />
           </Link>
         </div>
-        <div className="flex text-gray-900 items-center gap-12 max-sm:gap-6 font-bold text-[18px]">
+        <div className="flex text-gray-900 items-center gap-12 max-sm:gap-6 font-bold text-[18px] max-sm:ml-4">
           <Link href="/">
             <p className=" "> Condition of Use</p>
           </Link>
