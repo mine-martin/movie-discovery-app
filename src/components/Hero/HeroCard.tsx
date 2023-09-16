@@ -5,7 +5,7 @@ import React from "react";
 const HeroCard = ({ data }: { data: any }) => {
   return (
     <main className="relative w-full">
-      <section className="w-full flex xl:flex-row flex-col p-1">
+      <section className="w-full relative">
         <div className="bg-no-repeat bg-cover bg-center h-[600px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
           <Image src={data.imgURL} alt=" " layout="fill" objectFit="cover" />
         </div>

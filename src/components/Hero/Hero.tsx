@@ -96,7 +96,7 @@ const Hero = ({ movie }: { movie: any }) => {
     ),
   };
   return (
-    <section className="w-[1440px] flex xl:flex-row flex-col mx-auto relative">
+    <section className="xl:w-[1440px] flex xl:flex-row flex-col mx-auto relative">
       <Slider {...settings}>
         {heroData.map((data: any) => (
           <HeroCard key={data.id} data={data} />

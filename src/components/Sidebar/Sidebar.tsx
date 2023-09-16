@@ -58,10 +58,10 @@ const Sidebar = ({ movieid }: { movieid: any }) => {
                 }`}
               >
                 <div className="mt-[50px] flex gap-[15px] lg:text-[20px] lg:w-[226px] max-lg:w-[100px]  max-sm:w-[60px] h-[82px] items-center justify-center">
-                  <span className="max-sm:hidden">
+                  <span className="">
                     <div className="w-[25px] h-[25px] mt-1.5">{data.icon}</div>
                   </span>
-                  <h1 className="font-poppins max-lg:text-[11px] font-[600] text-[#BE123C]">
+                  <h1 className="font-poppins max-lg:text-[11px] font-[600] text-[#BE123C] max-sm:hidden">
                     {data.name}
                   </h1>
                   {pathname === data.path && (

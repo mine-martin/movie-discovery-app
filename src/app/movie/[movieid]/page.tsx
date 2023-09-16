@@ -44,7 +44,7 @@ const MoviePage = ({ params: { movieid, runtime } }: any) => {
 
   return (
     <section className="movie-overview max-lg:flex-col">
-      <Sidebar movieid={movieid}/>
+      <Sidebar movieid={movieid} />
       {renderContent()}
     </section>
   );
