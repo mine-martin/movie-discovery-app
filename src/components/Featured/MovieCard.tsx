@@ -30,7 +30,7 @@ const MovieCard = ({ data, id }: { data: any; id: any }) => {
         </article>
         <div className="p-1">
           <p className="text-gray-400 font-bold text-xs mt-2">
-            {data.origin_country}, {data.release_date}
+            USA, {data.release_date}
           </p>
           <div className="text-gray-900 font-bold text-lg mb-2 mt-2 ">
             {data.title}

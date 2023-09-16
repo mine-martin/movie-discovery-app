@@ -41,7 +41,7 @@ const MovieSearch = () => {
   };
 
   return (
-    <div className="lg:max-w-[40%] w-full flex items-center max-sm:flex-col gap-2 p-2 lg:border lg:border-white rounded-lg text-white sm:w-1/5">
+    <div className="lg:max-w-[40%] w-full flex items-center max-sm:flex-col gap-2 p-2 lg:border lg:border-white rounded-lg text-white sm:w-[20%]">
       <input
         type="text"
         placeholder="Search for a movie..."
