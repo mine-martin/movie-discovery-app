@@ -31,13 +31,6 @@ The application features a responsive and visually appealing user interface desi
 - Movies are displayed in a grid layout with their movie posters.
 - Each movie card displays the movie title and release date.
 
-#### Components
-
-- Movie Card: `[data-testid: movie-card]`
-- Movie Poster: `[data-testid: movie-poster]`
-- Movie Title: `[data-testid: movie-title]`
-- Movie Release Date: `[data-testid: movie-release-date]`
-
 ## Technologies Used
 
 - React.js
