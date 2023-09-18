@@ -50,7 +50,7 @@ const MovieSearch = () => {
         onChange={(e) => setTerm(e.target.value)}
       />
       <button
-        className="flex max-sm:justify-end absolute mt-6 mr-[100px] max-sm:w-full font-bold xl:w-[16px] xl:h-[16px]"
+        className="flex max-sm:justify-end max-sm:absolute max-sm:mt-6 max-sm:mr-[100px] max-sm:w-full font-bold xl:w-[16px] xl:h-[16px]"
         onClick={searchMovie}
         // disabled={loading}
       >
